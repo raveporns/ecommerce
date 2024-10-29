@@ -1,0 +1,23 @@
+.card-content {
+  margin-top: 10ืิทpx;
+}
+
+.card-img-top{
+    /* height: 30vh; */
+    height: 90%;
+}
+
+.col {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  width: 20%;
+  height: 40vh;
+}
+
+.row.row-cols-1.row-cols-md-3.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -15px;
+}

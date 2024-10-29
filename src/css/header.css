@@ -1,0 +1,30 @@
+.navbar{
+    background-color: rgb(255, 255, 255);
+    height: 13vh;
+}
+
+.navbar-brand{
+    font-size: 37px;
+    color: rgb(0, 0, 0);
+    margin-right: 40px;
+    margin-left: 20px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.nav-link{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    /* padding: auto; */
+    margin: 15px;
+    font-weight: bold;
+}
+/* .square-header{
+    height: 20vh;
+    background-color: aqua;
+} */
+
+body{
+    background-color: rgb(196, 196, 196);
+    /* opacity: 80%; */
+  }
