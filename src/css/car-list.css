@@ -1,0 +1,109 @@
+.container {
+  display: flex;
+}
+
+.filter {
+  width: 200px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+}
+
+.filter h2 {
+  margin-bottom: 10px;
+}
+
+.filter ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.filter li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.filter li:hover {
+  text-decoration: underline;
+}
+
+.car-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* แถวละ 5 คอลัมน์ */
+  gap: 20px;
+  padding: 20px;
+}
+
+.car-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.car-item img {
+  width: 100%;
+  height: auto;
+}
+.filter h2 {
+  margin-bottom: 10px;
+}
+
+.filter ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.filter li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.filter li:hover {
+  text-decoration: underline;
+}
+
+.filter label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.filter input[type="radio"] {
+  margin-right: 10px;
+}
+
+.container {
+  display: flex;
+}
+
+.filter {
+  width: 200px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+}
+
+.car-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* แถวละ 5 คอลัมน์ */
+  gap: 20px;
+  padding: 20px;
+}
+
+.car-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.car-item img {
+  width: 100%;
+  height: auto;
+}
