@@ -9,3 +9,4 @@ const Promotion = () => {
     </div>
   </>;
 };
+export default Promotion;

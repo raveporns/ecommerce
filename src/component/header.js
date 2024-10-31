@@ -14,36 +14,36 @@ const Header = () => {
           <div className="navbar-collapse">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
+                <Link className="nav-link" to="/cars">
                   ซื้อรถยนต์
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/promotion">
                   โปรโมชั่น
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/contact">
                   ติดต่อเรา
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/about">
                   เกี่ยวกับ TIMELAPSE
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/review">
                   รีวิว
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           <div>
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/login">
               เข้าสู่ระบบ/สมัครสมาชิก
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
