@@ -1,16 +1,16 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css"; 
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/header.css";
-
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="square-header">
       <nav className="navbar navbar-expand">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             TIMELAPSE
-          </a>
+          </Link>
           <div className="navbar-collapse">
             <ul className="navbar-nav">
               <li className="nav-item">
