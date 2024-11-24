@@ -1,0 +1,63 @@
+services:
+  # Frontend Service (React)
+  frontend:
+    build:
+      context: ./fe  
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./fe:/app
+    depends_on:
+      - backend
+
+  # Backend Service (Go app)
+  backend:
+    build:
+      context: ./be  
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./be:/app
+      - ./be/.env:/root/.env 
+    depends_on:
+      - db
+    env_file: .env
+
+  # Database Service (PostgreSQL)
+  db:
+    image: postgres:17
+    container_name: timelapse_postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql  # mount the init.sql file correctly
+    restart: always
+    env_file: .env
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: timelapse_pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
+  pgadmin_data:
